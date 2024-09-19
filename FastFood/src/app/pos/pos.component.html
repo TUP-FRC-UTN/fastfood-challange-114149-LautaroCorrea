@@ -1,0 +1,18 @@
+<hr>
+<div>     
+<h2>Point of Sell</h2>
+<form #form="ngForm" (ngSubmit)="enviarPedido(form)">
+    <div style="margin-bottom: 5px;">
+        <label for="">nombre</label>
+        <input type="text" name="name" ngModel required="true">
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label style="margin-right: 5px;" for="">pedido</label>
+        <input type="text" name="description" ngModel required="true">
+    </div>
+
+    <button type="submit" [disabled]="!form.valid" style="margin-top: 5px;">Ordenar</button>
+</form>
+
+</div>
+<hr>

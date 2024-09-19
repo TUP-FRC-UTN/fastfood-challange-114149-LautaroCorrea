@@ -1,0 +1,23 @@
+<hr>
+<div class="container">
+<h1>Kitchen</h1>
+<h3> Listado de pedidos </h3>
+<ul>
+    @for (item of listPedidos; track $index) {
+        <li>{{ item.number }} - {{ item.description }}</li> <button (click)="CocinarPedido(item)" style="margin-left: 5px;">Cocinar</button>
+    }
+</ul>
+
+<br> 
+
+<br>
+<h3> Pedidos en cocción </h3>
+<ul>
+    @if (enCoccion) {
+        <li>{{enCoccion.number}} - {{enCoccion.description}}</li>
+        <br>
+        <button (click)="pedidoCocinado()" style="margin-left: 5px;">Pedido Terminado</button>
+    }
+</ul>
+</div>
+<hr>

@@ -1,0 +1,8 @@
+<hr>
+<h3>Pedidos listos para entregar</h3>
+<ul>
+    @for (item of listCocinados; track $index) {
+        <li>{{ item.number }} - {{ item.description }}</li> <button (click)="EntregarPedido(item)" style="margin-left: 5px;">Entregar</button>
+    }
+</ul>
+<hr>

@@ -1,0 +1,8 @@
+<hr>
+<div class="container">
+    <h5>Pedidos Ingresados</h5>
+    @for (item of listIngresados; track $index) {
+        <li>{{ item | json }}</li>
+    }
+</div>
+<hr>
